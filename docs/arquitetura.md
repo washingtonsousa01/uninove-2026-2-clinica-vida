@@ -41,4 +41,4 @@ O resultado foi confirmado pelo comando ping github.com, que também utilizou o 
 
 ## Por que o HTTPS é necessário?
 
-O formulário de agendamento da Clinica Vida+ precisa utilizar  HTTPS para proteger os dados enviados entre o paciente e o servidor. Isso ajuda a impedir que terceiros ou alterem as informações durante a comunicação. Um dado sensivel que o formulário pode carregar é o CPF do paciente. Além disso, informações como nome, telefones e dados do agendamento também ser protegidas.ss
+O formulário de agendamento da Clínica Vida+ precisa utilizar HTTPS para proteger os dados enviados entre o paciente e o servidor. Isso ajuda a impedir que terceiros interceptem ou alterem as informações durante a comunicação. Um dado sensível que o formulário pode carregar é o CPF do paciente. Além disso, informações como nome, telefone e dados do agendamento também precisam ser protegidos.
