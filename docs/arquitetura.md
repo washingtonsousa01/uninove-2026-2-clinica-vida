@@ -12,7 +12,6 @@ sequenceDiagram
     S-->>N: 200 OK, HTML da agenda
 ```
 
-
 ## Evidência do DNS
 
 nslookup github.com
