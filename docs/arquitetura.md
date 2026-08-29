@@ -38,3 +38,7 @@ O resultado foi confirmado pelo comando ping github.com, que também utilizou o 
 | 52684-230a1c6db561aa21.js | 200 | script |
 | https://api.github.com/_private/browser/stats | 200 | ping |
 | https://collector.github.com/github/collect | 204 | ping |
+
+## Por que o HTTPS é necessário?
+
+O formulário de agendamento da Clinica Vida+ precisa utilizar  HTTPS para proteger os dados enviados entre o paciente e o servidor. Isso ajuda a impedir que terceiros ou alterem as informações durante a comunicação. Um dado sensivel que o formulário pode carregar é o CPF do paciente. Além disso, informações como nome, telefones e dados do agendamento também ser protegidas.ss
