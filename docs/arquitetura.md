@@ -6,15 +6,15 @@ participant N as Navegador do paciente
 participant D as Servidor DNS
 participant S as Servidor da Clínica Vida+
 N->>D: clinicavidamais.com.br?
-D-->>N: 203.0.113.42
+D-->>N: 91.108.127.97
 N->>S: conexão TCP e TLS na porta 443
-N->>S: GET /consultas/agendar
-S-->>N: 200 OK, HTML da agenda
+N->>S: GET /
+S-->>N: 200 OK, HTML da página
 ```
 
 ## Evidência do DNS
 
-nslookup github.com
+nslookup clinicavidamais.com.br 
 
 Resultado obtido:
 
@@ -22,21 +22,22 @@ Servidor: dns.google
 Address: 2001:4860:4860::8888
 
 Não é resposta autoritativa:
-Nome: github.com
-Address: 4.228.31.150
+Nome: clinicavidamais.com.br
+Address:2a02:4780:17:ad2b:26e6:1d11:327a:ff35
+2a02:4780:2e:b0d2:dff6:60df:2c9d:be72
+91.108.127.97
+89.116.213.183
 
-O DNS resolveu o domínio github.com para o endereço IP 4.228.31.150.
+O DNS resolveu o domínio clinicavidamais.com.br para o endereço IP encontrados no comando nslookup.
 
-O resultado foi confirmado pelo comando ping github.com, que também utilizou o IP 4.228.31.150.
+Entre os endereços IPv4 retornados estão 91.108.127.97 e 89.116.213.183.
 
 ## Evidência do HTTP
 
 | Requisição | Status | Tipo |
 |---|---:|---|
-| 65610.a20924495ad66810.module.css | 200 | stylesheet |
-| 52684-230a1c6db561aa21.js | 200 | script |
-| https://api.github.com/_private/browser/stats | 200 | ping |
-| https://collector.github.com/github/collect | 204 | ping |
+| https://clinicavidamais.com.br | 200 | text/html |
+| https://clinicavidamais.com.br/consultas |agendar | 404 | text/html |
 
 ## Por que o HTTPS é necessário?
 
